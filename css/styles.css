@@ -1,20 +1,18 @@
 :root {
-    --background-card: #f2e0cf;
-    --background-page: #854628;
-    --question-box: #7c7458;
-    --viewed: #2d2d23;
-    --letters: #2d2d23;
-    --white: #f4f3e6;
-    --black: #000;
+    --background-card: #c4c3e3;
+    --background-page: #504e76;
+    --question-box: #fdf8e2;
+    --viewed: #a3b565;
+    --letters-black: #000;
+    --letters-white: #f4f3e6;
 
-    --mainfont: "Oswald", sans-serif;
+    --mainfont: "Saira Condensed", "Oswald";
 } /*color palette and font*/
 
 /*global format*/
 html {
     box-sizing: border-box;
     font-size: 62.5%;
-    background-color: var(--background-page);
 }
 
 *, *:before, *:after {
@@ -22,19 +20,31 @@ html {
 }
 
 body {
-    line-height: 1.5;
-    font-family: var(--mainfont);
+    font-family: var(--mainfont), sans-serif;
+    margin: 0; /*centrado en toda la pag */
+    padding: 0;
+    display: flex; /* syntax error fixed */
+    flex-direction: column; /* card arriba y footer abajo */
     justify-content: center;
     align-items: center;
+    min-height: 16rem;
+    background-color: var(--background-page);
 }
 
-footer {
+/* Footer */
+.footer {
+    margin-top: 2rem; /* FAQs al footer */
+    padding: 1rem 0;
     text-align: center;
+    width: 100%;
+    color: var(--background-card);
+    font-size: 1rem;
+    position: absolute;
+    bottom: 0;
 }
 
+/* FAQs cntent */
 .card-main {
-    -webkit-box-shadow: -5px 5px 20px 2px rgba(64,63,64,0.8);
-    -moz-box-shadow: -5px 5px 20px 2px rgba(64,63,64,0.8);
     box-shadow: -5px 5px 20px 2px rgba(64,63,64,0.8);
     background-color: var(--background-card);
     padding: 4rem; /*inside*/
@@ -48,7 +58,7 @@ footer {
 }
 h1 {
     font-size: 3rem;
-    color: var(--letters);
+    color: var(--letters-black);
 }
 
 h2 {
@@ -74,7 +84,7 @@ h2 {
     background: var(--viewed);
 }
 .question:hover h2 {
-    color: var(--white);
+    color: var(--letters-white);
 }
 
 .answer {
