@@ -48,7 +48,7 @@ body {
     box-shadow: -5px 5px 20px 2px rgba(64,63,64,0.8);
     background-color: var(--background-card);
     padding: 4rem; /*inside*/
-    margin: 15rem; /*outside*/
+    margin: 10rem 0; /*outside*/
     border-radius: 2rem;
 }
 
