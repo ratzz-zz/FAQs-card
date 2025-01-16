@@ -21,48 +21,47 @@ html {
 
 body {
     font-family: var(--mainfont), sans-serif;
+    height: 100%;
     margin: 0; /*centrado en toda la pag */
     padding: 0;
     display: flex; /* syntax error fixed */
     flex-direction: column; /* card arriba y footer abajo */
     justify-content: center;
     align-items: center;
-    min-height: 16rem;
     background-color: var(--background-page);
 }
 
-/* Footer */
-.footer {
-    margin-top: 2rem; /* FAQs al footer */
-    padding: 1rem 0;
-    text-align: center;
-    width: 100%;
-    color: var(--background-card);
-    font-size: 1rem;
-    position: absolute;
-    bottom: 0;
+/* FAQs content */
+.faqs-container {
+    width: 90%; /* pintura con margen en lienzo (body) */
+    max-width: 120rem;
+    /* properties not inherited automatically */
+    display: flex;
+    flex-direction: column; /* card arriba y footer abajo */
+    justify-content: center;
+    align-items: center;
 }
 
-/* FAQs cntent */
-.card-main {
+.faqs-main {
     box-shadow: -5px 5px 20px 2px rgba(64,63,64,0.8);
     background-color: var(--background-card);
     padding: 4rem; /*inside*/
-    margin: 10rem 0; /*outside*/
+    margin: 10rem; /*outside*/
     border-radius: 2rem;
 }
 
-.card-main h1 {
+.faqs-main h1 {
     text-align: center;
     margin-bottom: 2rem;
 }
 h1 {
-    font-size: 3rem;
+    font-size: 3.8rem;
     color: var(--letters-black);
 }
 
 h2 {
-    font-size: 1.6rem;
+    font-size: 2.3rem;
+    padding: 0 2rem;
 }
 
 /* questions */
@@ -92,8 +91,45 @@ h2 {
     overflow: hidden;
     transition:max-height 0.5s ease-in-out;
     padding-left: 2rem;
+    padding-right: 3rem;
+}
+
+.faqs p {
+    font-size: 1.8rem;
 }
 
 .toggle:checked + .question + .answer {
     max-height: 10rem;
+}
+
+/* Footer */
+.footer {
+    margin-top: 1rem; /* FAQs al footer */
+    margin-bottom: 0;
+    padding: 1rem 0;
+    text-align: center;
+    width: 100%;
+    color: var(--background-card);
+    font-size: 1rem;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 480px) {
+
+    .faqs-main h1 {
+        font-size: 20px;
+        padding: 0;
+    }
+
+    .faqs h2 {
+        font-size: 12px;
+    }
+
+    .faqs p {
+        font-size: 8px;
+    }
+
+    .footer {
+        font-size: 8px;
+    }
 }
