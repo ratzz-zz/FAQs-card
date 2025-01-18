@@ -117,19 +117,22 @@ h2 {
 @media (max-width: 480px) {
 
     .faqs-main h1 {
-        font-size: 20px;
-        padding: 0;
+        font-size: 4rem;
+        padding: 0rem;
     }
-
+    .faqs{
+        margin-top: 1vh; 
+        width: 50vw;
+    }
     .faqs h2 {
-        font-size: 12px;
+        font-size: 2rem;
     }
 
     .faqs p {
-        font-size: 8px;
+        font-size: 1.2rem;
     }
 
     .footer {
-        font-size: 8px;
+        font-size: 1.3rem;
     }
 }
