@@ -3,7 +3,7 @@
 A simple, responsive FAQs card component built with **HTML & CSS**. This project allows users to view and toggle frequently asked questions in a clean and visually appealing way.
 
 ## 🖥️ Demo
-[Live Preview](#) _(Replace with actual link)_
+[Live Preview](https://faqqqqs.netlify.app/)
 
 ## 📌 Features
 - Responsive design without media queries
