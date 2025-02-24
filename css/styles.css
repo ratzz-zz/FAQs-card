@@ -22,31 +22,33 @@ html {
 body {
     font-family: var(--mainfont), sans-serif;
     height: 100%;
-    margin: 0; /*centrado en toda la pag */
-    padding: 0;
     display: flex; /* syntax error fixed */
     flex-direction: column; /* card arriba y footer abajo */
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
+    margin: 0; /*centrado en toda la pag */
     background-color: var(--background-page);
 }
 
 /* FAQs content */
 .faqs-container {
     width: 90%; /* pintura con margen en lienzo (body) */
-    max-width: 120rem;
+    max-width: 600px;
     /* properties not inherited automatically */
     display: flex;
     flex-direction: column; /* card arriba y footer abajo */
     justify-content: center;
     align-items: center;
+    padding: 2rem;
+    margin: 1rem;
 }
 
 .faqs-main {
     box-shadow: -5px 5px 20px 2px rgba(64,63,64,0.8);
     background-color: var(--background-card);
     padding: 4rem; /*inside*/
-    margin: 10rem; /*outside*/
+    margin: 10PX; /*outside*/
     border-radius: 2rem;
 }
 
@@ -76,7 +78,7 @@ h2 {
     background: var(--question-box);
     padding: 1rem;
     border-radius: 0.5rem;
-    transition: backround 0.5s;
+    transition: backround 0.25s;
 }
 
 .question:hover {
@@ -89,7 +91,7 @@ h2 {
 .answer {
     max-height: 0;
     overflow: hidden;
-    transition:max-height 0.5s ease-in-out;
+    transition:max-height 0.25s ease-in-out;
     padding-left: 2rem;
     padding-right: 3rem;
 }
